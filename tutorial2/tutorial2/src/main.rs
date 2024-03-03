@@ -3,7 +3,7 @@ fn main() {
     println!("x = {}", x);
 
     {
-        let x = 2;
+        let x = x - 2;
         println!("x = {}", x);
     }
 
