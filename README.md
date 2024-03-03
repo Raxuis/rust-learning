@@ -39,8 +39,8 @@ This repo is made to help me understand more Rust a programming language I disco
 
 ## :sparkles: Features
 
-:heavy_check_mark: You can check every commit to see my progress\
-:heavy_check_mark: Take some notes\
+- You can check every commit to see my progress
+- heavy_check_mark: Take some notes
 
 ## :rocket: Technologies
 
