@@ -6,6 +6,6 @@ fn main() {
 
     io::stdin()
         .read_line(&mut input)
-        .expect("failed to read line");
+        .expect("Failed to read line");
     println!("What you typed : {}", input);
 }
