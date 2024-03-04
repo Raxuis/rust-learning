@@ -1,7 +1,7 @@
 fn main() {
-    let x: u8 = 255; // 0 <-> 255
-    let y: u8 = 10; // 0 <-> 255
+    let x: f64 = 255.0;
+    let y: f64 = 10.0;
 
     let z = x / y;
-    println!("{}", z); // Gives 25 but the result is 25.5
+    println!("{}", z); // Finally gives 25.5
 }
