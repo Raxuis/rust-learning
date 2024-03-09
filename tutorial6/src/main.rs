@@ -6,7 +6,7 @@ fn main() {
     io::stdin()
         .read_line(&mut input)
         .expect("Failed to read line");
-    let input = input.trim();
+    let input = input.trim().to_lowercase();
     match input {
         "cookie" => println!("Miam a delicious {}.", input),
         "fruit" => println!("A {} is not thaht bad for my health!", input),
