@@ -7,9 +7,9 @@ fn main() {
         .read_line(&mut input)
         .expect("Failed to read line");
     let input = input.trim().to_lowercase();
-    match input {
+    match input.as_str() {
         "cookie" => println!("Miam a delicious {}.", input),
-        "fruit" => println!("A {} is not thaht bad for my health!", input),
+        "fruit" => println!("A {} is not that bad for my health!", input),
         _ => println!("Why would I eat {} when I can eat cookies.", input),
     }
 }
