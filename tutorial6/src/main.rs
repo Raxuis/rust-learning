@@ -1,10 +1,14 @@
+use std::{default, io};
+
 fn main() {
-    let food = "cookie";
-    if food == "cookie" {
-        println!("Miam a delicious {}.", food);
-    } else if food == "fruit" {
-        println!("A {} is not thaht bad for my health!", food)
-    } else {
-        println!("Why would I eat {} when I can eat cookies.", food);
+    println!("What do you offer to me?");
+    let mut input = String::new();
+    io::stdin()
+        .read_line(&mut input)
+        .expect("Failed to read line");
+    match input {
+        "cookie" => println!("Miam a delicious {}.", input),
+        "fruit" => println!("A {} is not thaht bad for my health!", input),
+        _ => println!("Why would I eat {} when I can eat cookies.", input),
     }
 }
