@@ -1,3 +1,4 @@
 fn main() {
-    println!("Hello, world!");
+    let cond = 2 < 3;
+    println!("{}", cond)
 }
