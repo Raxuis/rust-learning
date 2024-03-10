@@ -1,36 +1,44 @@
 use std::io;
 
 trait Table {
-    fn new(&mut self, width: u32, height: u32) -> Self;
+    fn new(width: u32, height: u32) -> Self;
     fn print(&self);
 }
 
-struct TableImpl;
+struct TableImpl {
+    width: u32,
+    height: u32,
+}
 
 impl Table for TableImpl {
-    fn new(&mut self, width: u32, height: u32) -> Self {
-        TableImpl
+    fn new(width: u32, height: u32) -> Self {
+        TableImpl { width, height }
     }
 
     fn print(&self) {
-        println!("Table");
+        println!(
+            "Table with width: {} and height: {}",
+            self.width, self.height
+        );
     }
 }
 
 fn main() {
-    println!("What the width or your table?");
+    println!("What's the width of your table?");
     let mut width = String::new();
     io::stdin()
         .read_line(&mut width)
         .expect("Error reading input");
-    println!("What the height or your table?");
+
+    println!("What's the height of your table?");
     let mut height = String::new();
     io::stdin()
         .read_line(&mut height)
         .expect("Error reading input");
-    let table = TableImpl::new(
-        width.trim().parse().unwrap(),
-        height.trim().parse().unwrap(),
-    );
+
+    let width: u32 = width.trim().parse().expect("Invalid width");
+    let height: u32 = height.trim().parse().expect("Invalid height");
+
+    let table = TableImpl::new(width, height);
     table.print();
 }
