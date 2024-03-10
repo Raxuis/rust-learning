@@ -7,5 +7,9 @@ fn main() {
     println!("What's the width of your table?");
     let mut width = String::new();
     io::stdin().read_line(&mut width).expect("Can't read it!");
-    println!("{}x{}", height, width);
+    println!(
+        "Your table's dimensions : {}x{}",
+        height.trim(),
+        width.trim()
+    );
 }
