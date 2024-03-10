@@ -4,5 +4,8 @@ fn main() {
     println!("What's the height of your table?");
     let mut height = String::new();
     io::stdin().read_line(&mut height).expect("Can't read it!");
-    println!("{}", height);
+    println!("What's the width of your table?");
+    let mut width = String::new();
+    io::stdin().read_line(&mut width).expect("Can't read it!");
+    println!("{}x{}", height, width);
 }
