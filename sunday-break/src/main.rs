@@ -16,10 +16,12 @@ impl Table for TableImpl {
     }
 
     fn print(&self) {
-        println!(
-            "Table with width: {} and height: {}",
-            self.width, self.height
-        );
+        for _ in 0..self.height {
+            for _ in 0..self.width {
+                print!("x");
+            }
+            println!();
+        }
     }
 }
 
